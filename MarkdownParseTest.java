@@ -13,13 +13,13 @@ public class MarkdownParseTest {
 
     @Test
     public void addition() {
-        assertEquals(2, 1 + 1);
+        assertEquals(2, 1 + 1 + 1);
     }
 
     
     @Test
     public void main() throws IOException {
-        Path fileName = Path.of("test-file");
+        Path fileName = Path.of("test-file.md");
         String content = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(content);
         ArrayList<String> exp = new ArrayList<String>();
